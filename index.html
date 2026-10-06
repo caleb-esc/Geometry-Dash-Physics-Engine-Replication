@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dash Prototype</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="game" width="960" height="540"></canvas>
+
+  <div id="menu" class="screen">
+    <h1>DASH PROTOTYPE</h1>
+    <p>Physics + Level Editor Test</p>
+    <button id="playBtn">PLAY</button>
+    <button id="editorBtn">LEVEL EDITOR</button>
+    <button id="iconBtn">ICON SELECTOR</button>
+  </div>
+
+  <div id="levels" class="screen hidden">
+    <h2>MAIN LEVELS</h2>
+    <div id="levelButtons"></div>
+    <button class="backBtn">BACK</button>
+  </div>
+
+  <div id="icons" class="screen hidden">
+    <h2>ICON SELECTOR</h2>
+    <div id="iconGrid"></div>
+    <button class="backBtn">BACK</button>
+  </div>
+
+  <div id="editor" class="screen hidden">
+    <h2>LEVEL EDITOR</h2>
+    <div id="editorTools"></div>
+    <p>Click the canvas to place objects. Drag with the middle mouse button to pan. Use mouse wheel to zoom.</p>
+    <button id="testEditor">TEST LEVEL</button>
+    <button id="saveEditor">SAVE JSON</button>
+    <button id="clearEditor">CLEAR</button>
+    <button class="backBtn">BACK</button>
+  </div>
+
+  <div id="hud" class="hidden">
+    <span id="progress">0%</span>
+    <button id="menuBtn">MENU</button>
+  </div>
+
+  <div id="editorHud" class="hidden">
+    <span id="selectedTool">Tool: block</span>
+  </div>
+</div>
+<script src="engine.js"></script>
+</body>
+</html>
